@@ -50,6 +50,16 @@ img { max-width: 100%; display: block; }
 .nav a:hover { color: #fff; }
 @media (max-width: 760px) { .nav { display: none; } }
 
+.header-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.header-actions .short { display: none; }
+@media (max-width: 560px) {
+  .brand-name { font-size: 14px; }
+  .header-actions { gap: 6px; }
+  .header-actions .btn { padding: 8px 12px; font-size: 12px; white-space: nowrap; }
+  .header-actions .full { display: none; }
+  .header-actions .short { display: inline; }
+}
+
 /* Buttons */
 .btn {
   display: inline-flex; align-items: center; justify-content: center;
