@@ -25,6 +25,7 @@
     <nav class="nav">
       <a href="#servicos">Serviços</a>
       <a href="#como-funciona">Como funciona</a>
+      <a href="#faq">Dúvidas</a>
       <a href="#contato">Contato</a>
     </nav>
     <a class="btn btn-primary btn-sm" target="_blank" rel="noreferrer"
@@ -167,6 +168,64 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Perguntas frequentes</h2>
+        <p>Se ficou alguma dúvida antes de chamar no WhatsApp, talvez esteja aqui.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Qual o prazo médio de entrega?</summary>
+          <p>Varia por tipo de peça — coroa, protocolo e laminado têm prazos diferentes.
+             A gente confirma o prazo exato do seu caso antes de começar a produção,
+             então você já sabe a data certa desde o início.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Como funciona o pagamento?</summary>
+          <p>Chama no WhatsApp que a gente te passa as condições certinho.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Vocês atendem fora de Curitiba?</summary>
+          <p>Atendemos principalmente Curitiba e região. Fora disso, fala com a gente
+             que vemos a melhor forma de receber o scan e enviar a peça pronta.</p>
+        </details>
+        <details class="faq-item">
+          <summary>E se a peça vier com algum problema?</summary>
+          <p>Chama a gente pelo WhatsApp e resolvemos — te explicamos a política
+             de ajuste/refação na conversa.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Preciso ter scanner intraoral pra trabalhar com vocês?</summary>
+          <p>Fala com a gente pelo WhatsApp pra confirmar as opções de envio do caso.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Como faço pra mandar o primeiro caso?</summary>
+          <p>Chama no WhatsApp — a gente te explica o passo a passo de envio do
+             arquivo e confirma o caso antes de começar a produção.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulário de lead -->
+  <section class="section section-muted">
+    <div class="wrap lead-wrap">
+      <div class="section-head">
+        <h2>Ainda não tem certeza? Deixa seu contato.</h2>
+        <p>A gente te manda a tabela de serviços e prazos, sem compromisso.</p>
+      </div>
+      <form class="lead-form" id="lead-form">
+        <input type="text" name="nome" placeholder="Nome" required />
+        <input type="text" name="clinica" placeholder="Clínica" required />
+        <input type="tel" name="whatsapp" placeholder="WhatsApp" required />
+        <input type="email" name="email" placeholder="E-mail" required />
+        <button type="submit" class="btn btn-primary">Quero receber a tabela →</button>
+      </form>
+    </div>
+  </section>
+
   <!-- CTA final -->
   <section id="contato" class="cta-final">
     <div class="wrap">
@@ -194,6 +253,19 @@
    href="https://wa.me/5541988700765?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20conhecer%20o%20fluxo%20digital%20do%20Dallarmi.">
   <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.47 1.29 4.93L2 22l5.32-1.39a9.87 9.87 0 0 0 4.72 1.2h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm0 18.02h-.01a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.16.83.84-3.08-.19-.31a8.08 8.08 0 0 1-1.25-4.34c0-4.49 3.65-8.14 8.16-8.14 2.18 0 4.22.85 5.76 2.4a8.08 8.08 0 0 1 2.39 5.76c0 4.49-3.66 8.19-8.11 8.19Zm4.47-6.1c-.24-.12-1.44-.71-1.67-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.95-.14.16-.29.18-.53.06-.24-.12-1.02-.38-1.95-1.21-.72-.64-1.2-1.44-1.35-1.68-.14-.24-.02-.37.11-.49.11-.11.24-.29.36-.43.12-.14.16-.24.24-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.31-.02-.47-.02-.16 0-.43.06-.65.31-.22.24-.86.84-.86 2.05s.88 2.38 1 2.54c.12.16 1.73 2.65 4.2 3.71.59.25 1.05.4 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.11-.22-.17-.46-.29Z"/></svg>
 </a>
+
+<script>
+  document.getElementById('lead-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = new FormData(e.target);
+    var msg = 'Olá! Quero receber a tabela de serviços do Dallarmi.\n' +
+      'Nome: ' + f.get('nome') + '\n' +
+      'Clínica: ' + f.get('clinica') + '\n' +
+      'WhatsApp: ' + f.get('whatsapp') + '\n' +
+      'E-mail: ' + f.get('email');
+    window.open('https://wa.me/5541988700765?text=' + encodeURIComponent(msg), '_blank');
+  });
+</script>
 
 </body>
 </html>

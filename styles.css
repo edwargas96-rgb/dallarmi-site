@@ -141,6 +141,33 @@ img { max-width: 100%; display: block; }
   left: 0; right: 0; bottom: 0; padding: 24px 14px 12px;
 }
 
+.faq-list { max-width: 720px; margin: 52px auto 0; display: flex; flex-direction: column; gap: 12px; }
+.faq-item {
+  background: var(--white); border: 1px solid var(--border); border-radius: 12px;
+  padding: 4px 22px;
+}
+.faq-item summary {
+  cursor: pointer; padding: 18px 0; font-weight: 600; font-size: 15px;
+  list-style: none; display: flex; align-items: center; justify-content: space-between;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+"; font-size: 20px; color: var(--royal); font-weight: 400; margin-left: 16px;
+}
+.faq-item[open] summary::after { content: "−"; }
+.faq-item p { padding-bottom: 18px; font-size: 14px; }
+
+.lead-wrap { max-width: 560px; text-align: center; }
+.lead-form {
+  margin-top: 40px; display: grid; gap: 12px; text-align: left;
+}
+.lead-form input {
+  width: 100%; padding: 13px 16px; border-radius: 8px; border: 1px solid var(--border);
+  font-family: inherit; font-size: 14px; background: var(--white); color: var(--ink);
+}
+.lead-form input:focus { outline: 2px solid var(--royal); outline-offset: 1px; }
+.lead-form .btn { margin-top: 6px; width: 100%; }
+
 .cta-final { background: var(--navy); padding: 88px 0; text-align: center; }
 .cta-final h2 { font-size: 30px; font-weight: 700; color: #fff; }
 .cta-final p { margin: 16px auto 0; max-width: 480px; color: rgba(255,255,255,0.65); }
